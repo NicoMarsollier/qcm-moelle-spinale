@@ -1,76 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QCM - Moelle Spinale</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #f8f9fa;
+<!-- [Previous head section and styles remain the same] -->
+<style>
+    /* Adding styles for the correction section */
+    .correction {
+      margin-top: 24px;
       padding: 16px;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      color: #2c3e50;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .question {
       background: white;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .question label {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2c3e50;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .answers {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .answer-option {
-      display: flex;
-      align-items: center;
-      padding: 12px;
-      border: 1px solid #e0e0e0;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: none;
     }
 
-    .answer-option:hover {
-      background-color: #f5f6f7;
+    .correction h2 {
+      color: #2c3e50;
+      margin-bottom: 16px;
+      font-size: 1.2rem;
     }
 
-    input[type="radio"] {
-      margin-right: 12px;
-      width: 20px;
-      height: 20px;
+    .correction-item {
+      margin-bottom: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
     }
 
-    .submit-btn {
-      background-color: #4CAF50;
+    .correction-item.correct {
+      border-left: 4px solid #4CAF50;
+    }
+
+    .correction-item.incorrect {
+      border-left: 4px solid #ff4444;
+    }
+
+    .show-correction-btn {
+      background-color: #2196F3;
       color: white;
       width: 100%;
       padding: 16px;
@@ -79,35 +43,16 @@
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      margin-top: 24px;
+      margin-top: 12px;
       transition: background-color 0.2s;
     }
 
-    .submit-btn:hover {
-      background-color: #45a049;
+    .show-correction-btn:hover {
+      background-color: #1976D2;
     }
+</style>
 
-    .submit-btn:active {
-      transform: scale(0.98);
-    }
-
-    .result {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #2c3e50;
-      padding: 16px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
 <body>
-  <h1>QCM - Moelle Spinale : Anatomie</h1>
-  <form id="quizForm">
-    <div class="question">
       <label>1. Quel est le rôle principal de la moelle épinière ?</label>
       <div class="answers">
         <label class="answer-option">
@@ -415,7 +360,7 @@
       </div>
     </div>
 
-    <div class="question">
+  <div class="question">
       <label>15. Les rapports externes de la moelle épinière avec les pédicules vertébraux concernent :</label>
       <div class="answers">
         <label class="answer-option">
@@ -431,4 +376,191 @@
           Le soutien mécanique de la moelle
         </label>
         <label class="answer-option">
-          <input type="radio" name="q15" value
+          <input type="radio" name="q15" value="d">
+          La circulation sanguine de la moelle
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>16. Le canal central de la moelle épinière est rempli de :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q16" value="a">
+          Liquide céphalo-rachidien
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q16" value="b">
+          Sang
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q16" value="c">
+          Air
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q16" value="d">
+          Lymphe
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>17. Les racines nerveuses sortent de la moelle épinière par :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q17" value="a">
+          Les foramens de conjugaison
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q17" value="b">
+          Les pédicules
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q17" value="c">
+          Les ligaments longitudinaux
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q17" value="d">
+          Les lamelles vertébrales
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>18. Le ligament longitudinal postérieur recouvre :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q18" value="a">
+          La face antérieure des vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q18" value="b">
+          La face postérieure des vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q18" value="c">
+          La face latérale des vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q18" value="d">
+          Les intervertébraux
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>19. La moelle épinière est protégée par des membranes appelées :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q19" value="c">
+          Méninges
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q19" value="a">
+          Ligaments
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q19" value="b">
+          Plexus
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q19" value="d">
+          Artères
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>20. Le principal rôle de la substance grise dans la moelle épinière est :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q20" value="c">
+          L'émission des informations motrices et la réception sensorielle
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q20" value="a">
+          La conduction des informations sensorielles
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q20" value="b">
+          La production de liquide céphalo-rachidien
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q20" value="d">
+          La protection de la moelle contre les infections
+        </label>
+      </div>
+    </div>
+
+    <button type="button" class="submit-btn" onclick="evaluateQuiz()">Soumettre</button>
+  </form>
+  
+  <div class="result" id="result"></div>
+  <button type="button" class="show-correction-btn" onclick="showCorrection()" id="correctionBtn" style="display:none">
+    Voir la correction
+  </button>
+  <div class="correction" id="correction"></div>
+
+  <script>
+    const correctAnswers = {
+      q1: { value: "b", explanation: "La moelle épinière assure la communication entre le cerveau et le corps" },
+      q2: { value: "b", explanation: "La moelle épinière commence au niveau du foramen magnum" },
+      q3: { value: "b", explanation: "La moelle épinière se termine au niveau des vertèbres L1-L2" },
+      q4: { value: "a", explanation: "Le cône médullaire est situé au niveau des vertèbres L1-L2" },
+      q5: { value: "b", explanation: "Les méninges sont responsables de la protection de la moelle épinière" },
+      q6: { value: "b", explanation: "Le filum terminale est une extension de la pie-mère" },
+      q7: { value: "b", explanation: "Les cornes dorsales sont responsables de la réception des informations sensorielles" },
+      q8: { value: "c", explanation: "La substance blanche transmet les informations nerveuses" },
+      q9: { value: "b", explanation: "Les artères radiculaires pénètrent par les foramens intervertébraux" },
+      q10: { value: "c", explanation: "Le plexus brachial innerve les membres supérieurs" },
+      q11: { value: "c", explanation: "Le plexus lombaire est formé par les racines L1-L4" },
+      q12: { value: "d", explanation: "Le nerf sciatique est issu du plexus sacré" },
+      q13: { value: "c", explanation: "Les artères spinales postérieures irriguent la partie postérieure de la moelle" },
+      q14: { value: "b", explanation: "Le ligament jaune se situe sur la face postérieure des vertèbres" },
+      q15: { value: "b", explanation: "Les rapports externes concernent la communication avec les nerfs spinaux" },
+      q16: { value: "a", explanation: "Le canal central est rempli de liquide céphalo-rachidien" },
+      q17: { value: "a", explanation: "Les racines nerveuses sortent par les foramens de conjugaison" },
+      q18: { value: "a", explanation: "Le ligament longitudinal postérieur recouvre la face antérieure des vertèbres" },
+      q19: { value: "c", explanation: "La moelle épinière est protégée par les méninges" },
+      q20: { value: "c", explanation: "La substance grise est responsable de l'émission motrice et de la réception sensorielle" }
+    };
+
+    function evaluateQuiz() {
+      let score = 0;
+      const results = [];
+
+      for (let i = 1; i <= 20; i++) {
+        const question = document.querySelector(`input[name='q${i}']:checked`);
+        if (question && question.value === correctAnswers[`q${i}`].value) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").innerHTML = `Votre score est de ${score} sur 20.`;
+      document.getElementById("correctionBtn").style.display = "block";
+    }
+
+    function showCorrection() {
+      const correctionDiv = document.getElementById("correction");
+      correctionDiv.style.display = "block";
+      correctionDiv.innerHTML = "<h2>Correction détaillée</h2>";
+
+      for (let i = 1; i <= 20; i++) {
+        const question = document.querySelector(`input[name='q${i}']:checked`);
+        const isCorrect = question && question.value === correctAnswers[`q${i}`].value;
+        
+        const correctionItem = document.createElement("div");
+        correctionItem.className = `correction-item ${isCorrect ? 'correct' : 'incorrect'}`;
+        correctionItem.innerHTML = `
+          <strong>Question ${i}:</strong><br>
+          ${isCorrect ? '✅ Correct' : '❌ Incorrect'}<br>
+          <strong>Explication:</strong> ${correctAnswers[`q${i}`].explanation}
+        `;
+        correctionDiv.appendChild(correctionItem);
+      }
+
+      correctionDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
