@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM - Moelle Spinale</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8f9fa;
+      padding: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .question {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .question label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .answers {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .answer-option {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .answer-option:hover {
+      background-color: #f5f6f7;
+    }
+
+    input[type="radio"] {
+      margin-right: 12px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .submit-btn:active {
+      transform: scale(0.98);
+    }
+
+    .result {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2c3e50;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>QCM - Moelle Spinale : Anatomie</h1>
+  <form id="quizForm">
+    <div class="question">
+      <label>1. Quel est le rôle principal de la moelle épinière ?</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q1" value="b">
+          Permettre la communication entre le cerveau et le corps
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q1" value="a">
+          Réguler la respiration
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q1" value="c">
+          Protéger les organes internes
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q1" value="d">
+          Produire du liquide céphalo-rachidien
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>2. La moelle épinière commence au niveau de :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q2" value="b">
+          Le foramen magnum
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q2" value="a">
+          L'occiput
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q2" value="c">
+          La vertèbre C1
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q2" value="d">
+          La vertèbre T12
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>3. La moelle épinière se termine au niveau des vertèbres :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q3" value="b">
+          L1-L2
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q3" value="a">
+          C1
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q3" value="c">
+          L5
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q3" value="d">
+          S1-S2
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>4. Le cône médullaire est situé au niveau des vertèbres :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q4" value="a">
+          L1-L2
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q4" value="b">
+          C7
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q4" value="c">
+          T12
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q4" value="d">
+          S1-S2
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>5. Quelle structure est responsable de la protection de la moelle épinière ?</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q5" value="b">
+          Les méninges
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q5" value="a">
+          Les vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q5" value="c">
+          Le disque intervertébral
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q5" value="d">
+          Le ligament longitudinal postérieur
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>6. Le filum terminale est une extension de :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q6" value="b">
+          La pie-mère
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q6" value="a">
+          La dure-mère
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q6" value="c">
+          La moelle épinière
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q6" value="d">
+          La queue de cheval
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>7. Les cornes dorsales de la moelle épinière sont responsables de :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q7" value="b">
+          La réception des informations sensorielles
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q7" value="a">
+          L'émission des informations motrices
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q7" value="c">
+          La circulation du liquide céphalo-rachidien
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q7" value="d">
+          La régulation de la température corporelle
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>8. Quelle est la principale fonction de la substance blanche de la moelle épinière ?</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q8" value="c">
+          Transmettre les informations nerveuses
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q8" value="a">
+          Réceptionner les informations sensorielles
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q8" value="b">
+          Produire des neurohormones
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q8" value="d">
+          Nourrir les cellules nerveuses
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>9. Les artères radiculaires pénètrent dans la moelle épinière par :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q9" value="b">
+          Les foramens intervertébraux
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q9" value="a">
+          Le foramen magnum
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q9" value="c">
+          Les pédicules vertébraux
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q9" value="d">
+          La canalisation veineuse
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>10. Le plexus brachial innervé :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q10" value="c">
+          Les membres supérieurs
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q10" value="a">
+          Les membres inférieurs
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q10" value="b">
+          Le tronc
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q10" value="d">
+          La tête
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>11. Le plexus lombaire est formé par les racines des segments :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q11" value="c">
+          L1-L4
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q11" value="a">
+          C1-C4
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q11" value="b">
+          T1-T12
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q11" value="d">
+          S1-S4
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>12. Le nerf sciatique est issu du plexus :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q12" value="d">
+          Sacré
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q12" value="c">
+          Lombaire
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q12" value="b">
+          Brachial
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q12" value="a">
+          Cervical
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>13. Les artères spinales postérieures irriguent principalement :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q13" value="c">
+          La partie postérieure de la moelle
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q13" value="a">
+          La substance grise
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q13" value="b">
+          La face antérieure de la moelle
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q13" value="d">
+          Les racines nerveuses
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>14. Le ligament jaune se situe :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q14" value="b">
+          Sur la face postérieure des vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q14" value="a">
+          Sur la face antérieure des vertèbres
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q14" value="c">
+          Entre les vertèbres et la moelle épinière
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q14" value="d">
+          En dehors du canal rachidien
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>15. Les rapports externes de la moelle épinière avec les pédicules vertébraux concernent :</label>
+      <div class="answers">
+        <label class="answer-option">
+          <input type="radio" name="q15" value="b">
+          La communication avec les nerfs spinaux
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q15" value="a">
+          La fonction sensorielle
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q15" value="c">
+          Le soutien mécanique de la moelle
+        </label>
+        <label class="answer-option">
+          <input type="radio" name="q15" value
